@@ -1,6 +1,6 @@
 {
   "name": "next-gravatar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lightweight Gravatar URL generator using SHA-256.",
   "keywords": [
     "gravatar",
@@ -9,6 +9,14 @@
     "sha256",
     "avatar"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rironib/next-gravatar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rironib/next-gravatar/issues"
+  },
+  "homepage": "https://github.com/rironib/next-gravatar#readme",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

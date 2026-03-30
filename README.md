@@ -1,5 +1,7 @@
 # next-gravatar
 
+[![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?logo=github)](https://github.com/rironib/next-gravatar)
+
 A modern, high-performance, and ultra-lightweight utility to generate Gravatar URLs using SHA-256. Zero dependencies, built-in TypeScript support, and optimized for speed.
 
 ## Install
