@@ -1,29 +1,27 @@
 {
   "name": "next-gravatar",
-  "version": "1.0.0",
-  "description": "A modern, high-performance, and ultra-lightweight utility to generate Gravatar URLs using SHA-256. Zero dependencies, built-in TypeScript support, and optimized for speed.",
+  "version": "1.0.1",
+  "description": "Lightweight Gravatar URL generator using SHA-256.",
+  "keywords": [
+    "gravatar",
+    "nextjs",
+    "typescript",
+    "sha256",
+    "avatar"
+  ],
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "test": "bun test",
-    "build": "bun build ./src/index.ts --outdir ./dist --target node && tsc --emitDeclarationOnly --outDir ./dist",
+    "build": "bun build ./src/index.ts --outdir ./dist --target node --minify && tsc --emitDeclarationOnly --outDir ./dist",
     "prepublishOnly": "bun run build"
   },
   "devDependencies": {
-    "@types/bun": "latest",
     "@types/node": "^25.5.0",
     "typescript": "^5.0.0"
   },
-  "license": "GPL-3.0-or-later"
+  "license": "MIT"
 }

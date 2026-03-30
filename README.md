@@ -46,4 +46,4 @@ const fallback = gravatar("");
 
 ## License
 
-GPL-3.0
+MIT
