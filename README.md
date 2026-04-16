@@ -1,4 +1,6 @@
-# next-gravatar
+<div align="center">
+  <h1>Next Gravatar</h1>
+</div>
 
 [![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?logo=github)](https://github.com/rironib/next-gravatar)
 

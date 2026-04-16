@@ -1,6 +1,6 @@
 {
   "name": "next-gravatar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Lightweight Gravatar URL generator using SHA-256.",
   "keywords": [
     "gravatar",
@@ -20,7 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun build ./src/index.ts --outdir ./dist --target node --minify && tsc --emitDeclarationOnly --outDir ./dist",
+    "build": "bun build ./index.ts --outdir ./dist --target node --minify && tsc --emitDeclarationOnly --outDir ./dist",
     "prepublishOnly": "bun run build"
   },
   "devDependencies": {
