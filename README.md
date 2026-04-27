@@ -1,52 +1,48 @@
-<div align="center">
-  <h1>Next Gravatar</h1>
-</div>
+# next-gravatar
 
-[![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?logo=github)](https://github.com/rironib/next-gravatar)
-
-A modern, high-performance, and ultra-lightweight utility to generate Gravatar URLs using SHA-256. Zero dependencies, built-in TypeScript support, and optimized for speed.
+Ultra-lightweight Gravatar URL generator for **Next.js** (App & Pages Router). SHA-256, synchronous, and only **272 bytes**.
 
 ## Install
 
-Choose your package manager:
-
 ```bash
-# npm
 npm install next-gravatar
-
-# pnpm
-pnpm add next-gravatar
-
-# yarn
-yarn add next-gravatar
-
-# bun
-bun add next-gravatar
 ```
 
-## Quick Start
+## Usage
 
-It's as easy as this:
+**App Router** (Server Components):
 
-```typescript
+```tsx
+import Image from "next/image";
 import { gravatar } from "next-gravatar";
 
-// 1. Basic usage (default size: 80, default: identicon)
-const url = gravatar("user@example.com");
-
-// 2. Custom photo size (1px to 2048px)
-const largePhoto = gravatar("user@example.com", 200);
-
-// 3. Smart fallback if email is empty
-const fallback = gravatar("");
+export default function Avatar({ email }: { email: string }) {
+  return <Image src={gravatar(email, 200)} alt="Avatar" width={200} height={200} />;
+}
 ```
 
-## Features
+**Pages Router:**
 
-- **Modern Hashing**: Uses SHA-256 (the current Gravatar standard).
-- **Lightweight**: Extremely small bundle size.
-- **Fast**: Zero external dependencies.
-- **TypeScript**: High-quality code suggestions and error checking built-in.
+```tsx
+import { gravatar } from "next-gravatar";
+
+export default function Avatar({ email }: { email: string }) {
+  return <img src={gravatar(email)} alt="Avatar" />;
+}
+```
+
+## API
+
+```ts
+gravatar(email: string, size?: number): string
+```
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `email` | `string` | — | User email (auto-trimmed & lowercased) |
+| `size` | `number` | `80` | Image size in px (1–2048) |
+
+Returns a Gravatar URL. Falls back to `identicon` if email is empty.
 
 ## License
 

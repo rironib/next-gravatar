@@ -1,31 +1,40 @@
 {
   "name": "next-gravatar",
-  "version": "1.0.4",
-  "description": "Lightweight Gravatar URL generator using SHA-256.",
+  "version": "1.0.6",
+  "description": "Ultra-lightweight Gravatar URL generator for Next.js using SHA-256.",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": "./index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "repository": "github:rironib/next-gravatar",
   "keywords": [
     "gravatar",
     "nextjs",
-    "typescript",
-    "sha256",
-    "avatar"
+    "avatar",
+    "profile",
+    "image",
+    "picture",
+    "identifier"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rironib/next-gravatar.git"
-  },
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "license": "MIT",
   "scripts": {
-    "build": "bun build ./index.ts --outdir ./dist --target node --minify && tsc --emitDeclarationOnly --outDir ./dist",
+    "build": "bun build ./index.ts --outfile ./index.js --target node --minify --external js-sha256 && tsc --emitDeclarationOnly --declarationDir ./",
     "prepublishOnly": "bun run build"
   },
-  "devDependencies": {
-    "@types/node": "^25.5.0",
-    "typescript": "^5.0.0"
+  "dependencies": {
+    "js-sha256": "^0.11.1"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
 }
